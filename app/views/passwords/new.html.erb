@@ -1,0 +1,16 @@
+<div id="clearance" class="password-reset mt-10 bg-gray-100 rounded-lg p-5 mx-auto">
+  <h2 class="font-black text-2xl"><%= t(".title") %></h2>
+
+  <p class="py-2"><%= t(".description") %></p>
+
+  <%= form_for :password, url: passwords_path, html: { class: 'space-y-5' } do |form| %>
+    <div class="text-field">
+      <%= form.label :email, class: 'block' %>
+      <%= form.email_field :email %>
+    </div>
+
+    <div class="submit-field">
+      <%= form.submit class: 'btn-primary' %>
+    </div>
+  <% end %>
+</div>

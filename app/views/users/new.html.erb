@@ -1,0 +1,15 @@
+<div id="clearance" class="sign-up mt-10 mx-auto bg-gray-100 rounded-lg p-5">
+  <h2 class="font-black text-2xl"><%= t(".title") %></h2>
+
+  <%= form_for @user, html: { class: 'space-y-5' } do |form| %>
+    <%= render partial: '/users/form', object: form %>
+
+    <div class="submit-field">
+      <%= form.submit class: 'btn-primary' %>
+    </div>
+
+    <div class="other-links text-sm flex gap-5">
+      <%= link_to t(".sign_in"), sign_in_path %>
+    </div>
+  <% end %>
+</div>
